@@ -29,6 +29,13 @@
         .con a{
             text-decoration: none;
         }
+        p.error {
+            background: #ff6464;
+            text-align: center;
+            padding: 5px;
+            border-radius: 3px;
+            color: white;
+        }
     </style>
     <body>
         <!-- Navigation-->

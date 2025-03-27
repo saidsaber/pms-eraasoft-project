@@ -5,6 +5,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         echo $_GET['id'];
         echo $_SESSION['user']['id'];
     }else{
-        echo 'must be log in one';
+        $_SESSION['addCart'] = ['You must log in first.'];
+        header("Location: ../index.php");
     }
 }

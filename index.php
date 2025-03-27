@@ -1,5 +1,11 @@
 
-
+<?php
+session_start();
+if(!empty($_SESSION['addCart'])){
+    echo "<p class='error'>{$_SESSION['addCart'][0]}</p>";
+}
+session_destroy();
+?>
 <?php require_once ('inc/header.php'); session_start();?>
 
 <!-- Header-->
