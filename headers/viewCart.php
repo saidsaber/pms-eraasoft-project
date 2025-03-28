@@ -14,20 +14,22 @@
     function getData(){
         $cartsData = [];
         if(!empty($_SESSION['user'])){
-            foreach(getCartData() as $data){
-                if($data['userId'] == $_SESSION['user']['id']){
-                    foreach(getProductData() as $product){
-                        if($product['id'] == $data['productId']){
-                            $cartData = [
-                                'productName' => $product['name'],
-                                'price' => $product['price'],
-                                'count' => $data['count'],
-                                'total' => ($data['count'] * $product['price']),
-                                'image' => $product['path'],
-                                'id' => $data['id']
-                            ];
-                            $cartsData[] = $cartData;
-                            $GLOBALS['total'] += ($data['count'] * $product['price']);
+            if(getCartData() != null && getProductData() !=null ){
+                foreach(getCartData() as $data){
+                    if($data['userId'] == $_SESSION['user']['id']){
+                        foreach(getProductData() as $product){
+                            if($product['id'] == $data['productId']){
+                                $cartData = [
+                                    'productName' => $product['name'],
+                                    'price' => $product['price'],
+                                    'count' => $data['count'],
+                                    'total' => ($data['count'] * $product['price']),
+                                    'image' => $product['path'],
+                                    'id' => $data['id']
+                                ];
+                                $cartsData[] = $cartData;
+                                $GLOBALS['total'] += ($data['count'] * $product['price']);
+                            }
                         }
                     }
                 }

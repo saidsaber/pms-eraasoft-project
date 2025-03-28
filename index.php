@@ -23,7 +23,8 @@ if(!empty($_SESSION['addCart'])){
             <?php
                 $fileProductssData = 'assets/products.json';
                 $products = file_exists($fileProductssData)? json_decode(file_get_contents($fileProductssData) , true) : [];
-                foreach($products as $product):   
+                if($products != null):
+                    foreach($products as $product):   
             ?>
             <div class="col mb-5">
                 <div class="card h-100">
@@ -52,7 +53,10 @@ if(!empty($_SESSION['addCart'])){
                     </div>
                 </div>
             </div>
-            <?php endforeach;?>
+            <?php 
+                endforeach;
+                endif; 
+            ?>
         </div>
     </div>
 </section>
