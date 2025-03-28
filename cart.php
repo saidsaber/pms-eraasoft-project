@@ -1,4 +1,13 @@
+
 <?php require_once('inc/header.php'); ?>
+<?php
+session_start();
+include 'headers/viewCart.php';
+if(empty($_SESSION['user'])){
+    echo "<p class='error'>You must log in first.</p>";
+    exit;
+}
+?>
 
 <!-- Header-->
 <header class="bg-dark py-5">
@@ -26,48 +35,28 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                        foreach(getData() as $cart):
+                        ?>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Product 1</td>
-                            <td>$9.99</td>
+                            <th scope="row"><img src="images/<?= $cart['image']?>" alt=""></th>
+                            <td><?= $cart['productName']?></td>
+                            <td><?= $cart['price']?> EGP</td>
                             <td>
-                                <input type="number" value="1">
+                                <input type="number" value="<?= $cart['count']?>">
                             </td>
-                            <td>$9.99</td>
+                            <td><?= $cart['total']?> EGP</td>
                             <td>
-                                <a href="#" class="btn btn-danger">Delete</a>
+                                <a href="hedears/delete?id=<?= $cart['id']?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Product 2</td>
-                            <td>$19.99</td>
-                            <td>
-                                <input type="number" value="2">
-                            </td>
-                            <td>$9.99</td>
-                            <td>
-                                <a href="#" class="btn btn-danger">Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Product 2</td>
-                            <td>$19.99</td>
-                            <td>
-                                <input type="number" value="2">
-                            </td>
-                            <td>$9.99</td>
-                            <td>
-                                <a href="#" class="btn btn-danger">Delete</a>
-                            </td>
-                        </tr>
+                        <?php endforeach;?>
                         <tr>
                             <td colspan="2">
                                 Tatal Price
                             </td>
                             <td colspan="3">
-                                <h3>3325 $</h3>
+                                <h3><?= getTotal()?> EGP</h3>
                             </td>
                             <td>
                                 <a href="checkout.php" class="btn btn-primary">Checkout</a>

@@ -1,12 +1,11 @@
 
+<?php require_once ('inc/header.php'); session_start();?>
 <?php
-session_start();
 if(!empty($_SESSION['addCart'])){
     echo "<p class='error'>{$_SESSION['addCart'][0]}</p>";
+    $_SESSION['addCart'] = null;
 }
-session_destroy();
 ?>
-<?php require_once ('inc/header.php'); session_start();?>
 
 <!-- Header-->
 <header class="bg-dark py-5">

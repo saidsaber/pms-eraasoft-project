@@ -36,6 +36,9 @@
             border-radius: 3px;
             color: white;
         }
+        tr th img {
+            width: 55px;
+        }
     </style>
     <body>
         <!-- Navigation-->
