@@ -1,0 +1,16 @@
+[
+    {
+        "name": "said",
+        "email": "saidsaber606@gmail.com",
+        "phone": "2345235",
+        "password": "$2y$10$\/J6m\/qorWdKaMSe1ZtacSOzvMb3ZP3NZoCv\/bS12agBDBVm\/goVJ.",
+        "id": 1
+    },
+    {
+        "name": "saber",
+        "email": "saidsaber606@gmail.com",
+        "phone": "334343",
+        "password": "$2y$10$uA53.XBOoFOK.NFRjYWUl.RKJNkh1gP9VudxXnKj0QChjrXMbJvGK",
+        "id": 2
+    }
+]
