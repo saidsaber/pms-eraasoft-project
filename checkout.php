@@ -1,5 +1,12 @@
 <?php require_once('inc/header.php'); ?>
-
+<?php
+session_start();
+include 'headers/viewCart.php';
+if(empty($_SESSION['user'])){
+    echo "<p class='error'>You must log in first.</p>";
+    exit;
+}
+?>
 <!-- Header-->
 <header class="bg-dark py-5">
     <div class="container px-4 px-lg-5 my-5">
@@ -17,24 +24,16 @@
                 <div class="border p-2">
                     <div class="products">
                         <ul class="list-unstyled">
-                            <li class="border p-2 my-1"> Product #1 -
-                                <span class="text-success mx-2 mr-auto bold">2 x 25$</span>
+                            <?php
+                            foreach(getData() as $product):
+                            ?>
+                            <li class="border p-2 my-1"> <p style="display:inline"><?= $product['productName']?></p> -
+                                <span class="text-success mx-2 mr-auto bold"><?= $product['count'] ." * ".$product['price']?></span>
                             </li>
-                            <li class="border p-2 my-1"> Product #1 -
-                                <span class="text-success mx-2 mr-auto bold">2 x 25$</span>
-                            </li>
-                            <li class="border p-2 my-1"> Product #1 -
-                                <span class="text-success mx-2 mr-auto bold">2 x 25$</span>
-                            </li>
-                            <li class="border p-2 my-1"> Product #1 -
-                                <span class="text-success mx-2 mr-auto bold">2 x 25$</span>
-                            </li>
-                            <li class="border p-2 my-1"> Product #1 -
-                                <span class="text-success mx-2 mr-auto bold">2 x 25$</span>
-                            </li>
+                            <?php endforeach;?>
                         </ul>
                     </div>
-                    <h3>Total : 644 $</h3>
+                    <h3>Total : <?= getTotal()?> EGP</h3>
                 </div>
             </div>
             <div class="col-8">

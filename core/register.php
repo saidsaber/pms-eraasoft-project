@@ -30,10 +30,14 @@ function redirect($userData){
                     header("Location: ../index.php");
                     exit;
                 }else{
-                    $_SESSION['egnore'] = 'user name  or password is incorrect';
+                    $_SESSION['egnore'] = "The username or password is incorrect or missing.";
                     header("Location: ../register.php");
                     exit;
                 }
+            }else{
+                $_SESSION['egnore'] = "The username or password is incorrect or missing.";
+                header("Location: ../register.php");
+                exit;
             }
         }
     }else{

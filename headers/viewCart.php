@@ -38,12 +38,7 @@
         }
     }
     function getTotal(){
+        $GLOBALS['total'] = 0;
+        getData();
         return $GLOBALS['total'];
-    }
-
-    function test(){
-        echo '<pre>';
-        print_r(getData());
-        echo '</pre>';
-        var_dump(getTotal());
     }
