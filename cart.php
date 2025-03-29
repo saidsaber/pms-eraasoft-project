@@ -47,7 +47,7 @@ if(empty($_SESSION['user'])){
                             </td>
                             <td><?= $cart['total']?> EGP</td>
                             <td>
-                                <a href="hedears/delete?id=<?= $cart['id']?>" class="btn btn-danger">Delete</a>
+                                <a href="headers/delete.php?id=<?= $cart['id']?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                         <?php endforeach;?>

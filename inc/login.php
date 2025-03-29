@@ -1,11 +1,3 @@
-<?php
-include('core/mainFuntion.php');
-session_start();
-// exit;
-if(!empty($session['user'])){
-    header("Location: index.php");
-}else{
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +66,8 @@ if(!empty($session['user'])){
     </div>
     <?php
     $_SESSION['error'] = null;
-}
+    // session_unset();
+    // session_destroy();
     ?>
 </body>
 </html>

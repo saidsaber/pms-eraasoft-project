@@ -4,5 +4,11 @@
         "productId": 1,
         "id": 1,
         "count": 2
+    },
+    {
+        "userId": 1,
+        "productId": 2,
+        "id": 2,
+        "count": 1
     }
 ]

@@ -38,14 +38,19 @@ function isrequired($userData){
 }
 
 function createUser($userData){
-    if(isrequired($userData)){
-        sendError();
-    }
-    if(errors($userData)){
-        sendError();
-    }
-    if(!errors($userData) && !isrequired($userData)){
-        creatUser($userData);
-        return 1;
+    if(!empty($_SESSION['user'])){
+        if(isrequired($userData)){
+            sendError();
+        }
+        if(errors($userData)){
+            sendError();
+        }
+        if(!errors($userData) && !isrequired($userData)){
+            creatUser($userData);
+            return 1;
+        }
+    }else{
+        header("Location: ../index.php");
+        exit;
     }
 }

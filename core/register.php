@@ -48,8 +48,13 @@ function redirect($userData){
 }
 
 function register($userData){
-    if(isrequired($userData))
+    if(empty($_SESSION['user'])){
+        if(isrequired($userData))
         sendError();
-    else
-        redirect($userData);
+        else
+            redirect($userData);
+    }else{
+        header("Location: ../index.php");
+        exit;
+    }
 }
