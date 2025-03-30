@@ -56,11 +56,11 @@
                         <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                     </ul>
-                    <form class="d-flex" action="cart.php">
+                    <form class="d-flex" action="cart.php" method="post">
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill"><?=  countCart($_SESSION['user']['id']??0);?></span>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill"><?=  countCart($_SESSION['user']['id'] ?? 0);?></span>
                         </button>
                     </form>
                 </div>

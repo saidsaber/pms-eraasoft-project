@@ -10,11 +10,5 @@
         "productId": 3,
         "id": 2,
         "count": 1
-    },
-    {
-        "userId": 2,
-        "productId": 2,
-        "id": 3,
-        "count": 1
     }
 ]

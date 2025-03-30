@@ -1,6 +1,6 @@
-<?php require_once('inc/header.php'); ?>
-<?php
+<?php 
 session_start();
+require_once('inc/header.php'); 
 include 'headers/viewCart.php';
 if(empty($_SESSION['user'])){
     echo "<p class='error'>You must log in first.</p>";
