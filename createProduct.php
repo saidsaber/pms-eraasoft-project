@@ -70,8 +70,8 @@
         </form>
     </div>
     <?php
-    session_unset();
-    session_destroy();
+    $_SESSION['error'] = null;
+    $_SESSION['image'] = null;
     ?>
 </body>
 </html>

@@ -34,12 +34,11 @@ function redirect($userData){
                     header("Location: ../register.php");
                     exit;
                 }
-            }else{
-                $_SESSION['egnore'] = "The username or password is incorrect or missing.";
-                header("Location: ../register.php");
-                exit;
             }
         }
+        $_SESSION['egnore'] = "The username or password is incorrect or missing.";
+        header("Location: ../register.php");
+        exit;
     }else{
         $_SESSION['egnore'] = 'user name  or password is incorrect';
         header("Location: ../register.php");
@@ -50,7 +49,7 @@ function redirect($userData){
 function register($userData){
     if(empty($_SESSION['user'])){
         if(isrequired($userData))
-        sendError();
+            sendError();
         else
             redirect($userData);
     }else{

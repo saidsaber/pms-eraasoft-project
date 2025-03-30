@@ -18,5 +18,6 @@ function deleteCart($cartData){
     } 
 }
 if(!empty($_SESSION['user'])){
-    print_r(deleteCart(getCartData()));
+    file_put_contents($GLOBALS['fileCartData'], json_encode(deleteCart(getCartData()) , JSON_PRETTY_PRINT));
+    header("Location: ../cart.php");
 }
