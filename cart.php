@@ -4,7 +4,7 @@ session_start();
 require_once('inc/header.php'); 
 include 'headers/viewCart.php';
 if(empty($_SESSION['user'])){
-    echo "<p class='error'>You must log in first.</p>";
+    echo "<p class='error'>You must <a href='login.php'>log in</a> first.</p>";
     exit;
 }
 ?>

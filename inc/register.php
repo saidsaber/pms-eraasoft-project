@@ -1,17 +1,12 @@
 <?php
 include('core/mainFuntion.php');
-// session_start();
-// exit;
-if(!empty($session['user'])){
-    header("Location: index.php");
-}else{
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>انشاء حساب</title>
+    <title>تسجيل دخول</title>
 </head>
 <style>
     *{
@@ -59,22 +54,19 @@ if(!empty($session['user'])){
 </style>
 <body>
     <div class="con">
-        <form action="headers/createuser.php" method="post">
+        <form action="headers/register.php" method="post">
+            <label style="display:<?= setError() == null ? 'none' : 'block'?>"><?= setError()?></label>
             <input type="text" name="name" placeholder="Your Name" value="<?= old('name')?>">
             <label style="display:<?= displayError('name')?>"><?= showError('name')?></label>
-            <input type="text" name="email" placeholder="Your Email" value="<?= old('email')?>">
-            <label style="display:<?= displayError('email')?>"><?= showError('email')?></label>
-            <input type="text" name="phone" placeholder="Phone Number" value="<?= old('phone')?>">
-            <label style="display:<?= displayError('phone')?>"><?= showError('phone')?></label>
             <input type="password" name="password" placeholder="Password" value="<?= old('password')?>">
             <label style="display:<?= displayError('password')?>"><?= showError('password')?></label>
-            <input type="submit" value="send" name='save'>
-            <a href="register.php"> لدي حساب بالفعل</a>
+            <input type="submit" value="send" name="save">
+            <a href="login.php">انشاء حساب</a>
         </form>
     </div>
     <?php
+    $_SESSION['egnore'] = null;
     $_SESSION['error'] = null;
-}
     ?>
 </body>
 </html>
