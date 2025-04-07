@@ -51,6 +51,8 @@ function register($userData){
         if(isrequired($userData))
             sendError();
         else
+            $_SESSION['error'] = null;
+            $_SESSION['error'] = null;
             redirect($userData);
     }else{
         header("Location: ../index.php");

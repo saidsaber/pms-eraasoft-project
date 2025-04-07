@@ -1,0 +1,29 @@
+[
+    {
+        "id": 0,
+        "name": "said ",
+        "email": "saidsaber606@gmail.com",
+        "address": "mansoria",
+        "phone": "01101490722",
+        "notes": "visa",
+        "cartData": [
+            {
+                "productName": "\u0634\u0646\u0637\u0629 \u0644\u0627\u0628\u062a\u0648\u0628 \u0636\u0647\u0631 \u0642\u0645\u0627\u0634",
+                "price": "400",
+                "count": 2,
+                "total": 800,
+                "image": "1843769956a4639a99-84d1-4978-955c-9d0fa988065e.webp",
+                "id": 1
+            },
+            {
+                "productName": "\u0633\u0627\u0639\u0629 DITOVA \u0641\u0635\u0648\u0635",
+                "price": "180",
+                "count": 1,
+                "total": 180,
+                "image": "1460471319f13f6172-1b53-4c17-b77b-5421a8168405.webp",
+                "id": 2
+            }
+        ],
+        "total": 980
+    }
+]

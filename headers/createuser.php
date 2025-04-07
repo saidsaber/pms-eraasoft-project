@@ -1,10 +1,10 @@
 <?php
 include(realpath(__DIR__ .'/../core/login.php'));
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['name'])){
-    $name = $_POST['name'];
+    $name = trim($_POST['name']);
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $password = $_POST['password'];
+    $password = trim($_POST['password']);
     $userData = [
         "name" => $name,
         "email" => $email,

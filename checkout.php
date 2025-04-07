@@ -2,11 +2,21 @@
 session_start();
 require_once('inc/header.php'); 
 include 'headers/viewCart.php';
+include 'core/mainFuntion.php';
 if(empty($_SESSION['user'])){
     echo "<p class='error'>You must log in first.</p>";
     exit;
 }
 ?>
+<style>
+        input+label {
+        background: #ff6464;
+        text-align: center;
+        padding: 5px;
+        border-radius: 3px;
+        color: white;
+    }
+</style>
 <!-- Header-->
 <header class="bg-dark py-5">
     <div class="container px-4 px-lg-5 my-5">
@@ -37,30 +47,35 @@ if(empty($_SESSION['user'])){
                 </div>
             </div>
             <div class="col-8">
-                <form action="" class="form border my-2 p-3">
+                <form action="headers/checkout.php" method="post" class="form border my-2 p-3">
                     <div class="mb-3">
                         <div class="mb-3">
                             <label for="">Name</label>
-                            <input type="text" name="" id="" class="form-control">
+                            <input type="text" name="name" id="" class="form-control" value="<?= old('name')?>">
+                            <label style="display:<?= displayError('name')?>"><?= showError('name')?></label>
                         </div>
                         <div class="mb-3">
                             <label for="">Email</label>
-                            <input type="email" name="" id="" class="form-control">
+                            <input type="text" name="email" id="" class="form-control" value="<?= old('email')?>">
+                            <label style="display:<?= displayError('email')?>"><?= showError('email')?></label>
                         </div>
                         <div class="mb-3">
                             <label for="">Address</label>
-                            <input type="text" name="" id="" class="form-control">
+                            <input type="text" name="address" id="" class="form-control" value="<?= old('address')?>">
+                            <label style="display:<?= displayError('address')?>"><?= showError('address')?></label>
                         </div>
                         <div class="mb-3">
                             <label for="">Phone</label>
-                            <input type="number" name="" id="" class="form-control">
+                            <input type="number" name="phone" id="" class="form-control" value="<?= old('phone')?>">
+                            <label style="display:<?= displayError('phone')?>"><?= showError('phone')?></label>
                         </div>
                         <div class="mb-3">
                             <label for="">Notes</label>
-                            <input type="text" name="" id="" class="form-control">
+                            <input type="text" name="notes" id="" class="form-control" value="<?= old('notes')?>">
+                            <label style="display:<?= displayError('notes')?>"><?= showError('notes')?></label>
                         </div>
                         <div class="mb-3">
-                            <input type="submit" value="Send" id="" class="btn btn-success">
+                            <input type="submit" value="Send" name="send" class="btn btn-success">
                         </div>
                     </div>
                 </form>
@@ -68,4 +83,7 @@ if(empty($_SESSION['user'])){
         </div>
     </div>
 </section>
-<?php require_once('inc/footer.php'); ?>
+
+<?php 
+$_SESSION['error'] = null;
+require_once('inc/footer.php'); ?>

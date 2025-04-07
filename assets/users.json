@@ -1,16 +1,16 @@
 [
     {
-        "name": "said",
+        "name": "said ",
         "email": "saidsaber606@gmail.com",
-        "phone": "3498",
-        "password": "$2y$10$CSnAjvmRBgUgKMzBVeMpNufNZqyxNlqNUyikVTsLcJffCoZ3kyBeC",
+        "phone": "01101490722",
+        "password": "$2y$10$vsR3PQBiqreUkmJ8iqPdgOLCQPsi8pY8O89jhOM9dhS741nUN0xii",
         "id": 1
     },
     {
         "name": "saber",
         "email": "saidsaber606@gmail.com",
-        "phone": "2345235",
-        "password": "$2y$10$4V0JVeDliRlWd41MKLy0eOb6NlajZrxjqNQXP5gaTSBJKmetlkIby",
+        "phone": "01101490722",
+        "password": "$2y$10$kE0dz5reGYXbCsxmOy.vMOu.cTzLAhbDEnvYVx.11RY9QqG.ilcIq",
         "id": 2
     }
 ]

@@ -46,6 +46,7 @@ function saveImage($productData){
 }
 
 function saveData($productData){
+    $_SESSION['error'] = null;
     $fileProductssData = '../assets/products.json';
     $products = file_exists($fileProductssData)? json_decode(file_get_contents($fileProductssData) , true) : [];
 

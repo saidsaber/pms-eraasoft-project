@@ -46,6 +46,7 @@ function createUser($userData){
             sendError();
         }
         if(!errors($userData) && !isrequired($userData)){
+            $_SESSION['error'] = null;
             creatUser($userData);
             return 1;
         }
