@@ -2,29 +2,15 @@
     {
         "name": "said",
         "email": "saidsaber606@gmail.com",
-        "phone": "2345235",
-        "password": "$2y$10$\/J6m\/qorWdKaMSe1ZtacSOzvMb3ZP3NZoCv\/bS12agBDBVm\/goVJ.",
+        "phone": "3498",
+        "password": "$2y$10$CSnAjvmRBgUgKMzBVeMpNufNZqyxNlqNUyikVTsLcJffCoZ3kyBeC",
         "id": 1
     },
     {
         "name": "saber",
         "email": "saidsaber606@gmail.com",
         "phone": "2345235",
-        "password": "$2y$10$XcZXj\/uolrgY2du.gh3HmOvv7DL2Tv2KD5RRRvxGrCZ9OroIYTHXO",
+        "password": "$2y$10$4V0JVeDliRlWd41MKLy0eOb6NlajZrxjqNQXP5gaTSBJKmetlkIby",
         "id": 2
-    },
-    {
-        "name": "saber",
-        "email": "saidsaber606@gmail.com",
-        "phone": "2345235",
-        "password": "$2y$10$eM0Bu3.nbGDZL9p.3kaw0uNeCtnAxmsZbXh\/JswGfzJEjwkoH2Jmu",
-        "id": 3
-    },
-    {
-        "name": "sultan",
-        "email": "saidsaber606@gmail.com",
-        "phone": "2345235",
-        "password": "$2y$10$7YeVXVX6osrZ.iEXdr3oyuGwSXix3Aj8r1rLkScwbmmkcyPPdBPWu",
-        "id": 4
     }
 ]

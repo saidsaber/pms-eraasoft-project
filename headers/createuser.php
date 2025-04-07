@@ -1,5 +1,5 @@
 <?php
-include('../core/login.php');
+include(realpath(__DIR__ .'/../core/login.php'));
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['name'])){
     $name = $_POST['name'];
     $email = $_POST['email'];

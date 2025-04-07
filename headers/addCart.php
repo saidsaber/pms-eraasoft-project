@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../core/addToCart.php";
+include realpath(__DIR__ . "/../core/addToCart.php");
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
     if(!empty($_SESSION['user'])){
 
